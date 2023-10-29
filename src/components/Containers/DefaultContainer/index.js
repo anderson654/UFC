@@ -9,11 +9,11 @@ const CustomStatusBar = () => {
     )
 }
 
-export default function DefaultContainer({ children }) {
+export default function DefaultContainer({ children, defaultPaddingHorizontal = false }) {
 
     return (
-        <View style={styles.container}>
-            <CustomStatusBar/>
+        <View style={[styles.container, { paddingHorizontal: defaultPaddingHorizontal ? 20 : 0 }]}>
+            <CustomStatusBar />
             {children}
         </View>
     )
