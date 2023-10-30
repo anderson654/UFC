@@ -6,7 +6,7 @@ import { Dimensions } from 'react-native';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
-const CardImage = () => {
+const CardImage = ({ children }) => {
 
     return (
         <View style={styles.container}>
@@ -18,6 +18,7 @@ const CardImage = () => {
                     <LinearGradient colors={['transparent', 'rgba(0,0,0,1)']} start={{ x: 1, y: 0.5 }} end={{ x: 0, y: 0.5 }} locations={[0.6, 1]} style={styles.gradient}>
                         <LinearGradient colors={['transparent', 'rgba(0,0,0,1)']} start={{ x: 0.5, y: 1 }} end={{ x: 0.5, y: 0 }} locations={[0.6, 1]} style={styles.gradient}>
                             <LinearGradient colors={['transparent', 'rgba(0,0,0,1)']} start={{ x: 0.5, y: 0 }} end={{ x: 0.5, y: 1 }} locations={[0.6, 1]} style={styles.gradient}>
+                                {children}
                             </LinearGradient>
                         </LinearGradient>
                     </LinearGradient>

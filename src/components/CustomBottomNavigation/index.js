@@ -13,11 +13,11 @@ import Athletes from '../../screens/Athletes';
 const RouteMap = ({ setActivityScreean }) => {
     const [selectIndex, setSelectIndex] = React.useState(0);
     const [routes] = React.useState([
-        { key: 'VEM AÍ', title: 'Favorites', focusedIcon: 'calendar', typeIcon: 'ionicon', setActivityScreean: () => setActivityScreean(ComeHere) },
-        { key: 'RESULTADOS', title: 'Albums', focusedIcon: 'clipboard', typeIcon: 'ionicon', setActivityScreean: () => setActivityScreean(Results) },
-        { key: 'FIGHT PASS', title: 'Recents', focusedIcon: 'tv', typeIcon: 'ionicon', setActivityScreean: () => setActivityScreean(FightPass) },
-        { key: 'NOTÍCIAS', title: 'Notifications', focusedIcon: 'newspaper', typeIcon: 'ionicon', setActivityScreean: () => setActivityScreean(News) },
-        { key: 'ATLETAS', title: 'Notifications', focusedIcon: 'boxing-glove', typeIcon: 'material-community', setActivityScreean: () => setActivityScreean(Athletes) },
+        { key: 'VEM AÍ', title: 'Favorites', focusedIcon: 'calendar', typeIcon: 'ionicon', setActivityScreean: () => setActivityScreean(<ComeHere/>) },
+        { key: 'RESULTADOS', title: 'Albums', focusedIcon: 'clipboard', typeIcon: 'ionicon', setActivityScreean: () => setActivityScreean(<Results/>) },
+        { key: 'FIGHT PASS', title: 'Recents', focusedIcon: 'tv', typeIcon: 'ionicon', setActivityScreean: () => setActivityScreean(<FightPass/>) },
+        { key: 'NOTÍCIAS', title: 'Notifications', focusedIcon: 'newspaper', typeIcon: 'ionicon', setActivityScreean: () => setActivityScreean(<News/>) },
+        { key: 'ATLETAS', title: 'Notifications', focusedIcon: 'boxing-glove', typeIcon: 'material-community', setActivityScreean: () => setActivityScreean(<Athletes/>) },
     ]);
     return routes.map((obj, index) => (
         <LabelMenu key={index} index={index} selectIndex={selectIndex} setBtnSelect={setSelectIndex} icon={obj?.focusedIcon} typeIcon={obj?.typeIcon} title={obj?.key} setActivityScreean={obj.setActivityScreean} />
@@ -38,15 +38,15 @@ const LabelMenu = React.memo(({ index, selectIndex, setBtnSelect, icon, typeIcon
 
 const CustomBottomNavigation = () => {
 
-    const [screen, setActivityScreean] = React.useState(ComeHere);
+    const [screen, setActivityScreean] = React.useState(<ComeHere />);
 
     return (
-        <View style={{ flex: 1, flexDirection: "column", backgroundColor: 'black'}}>
+        <View style={{ flex: 1, flexDirection: "column", backgroundColor: 'black' }}>
             <View style={{ flex: 1 }}>
                 {/* {screen} */}
-                <ComeHere />
+                <Results />
             </View>
-            <View style={{ backgroundColor: "#fff", flexDirection: "row", backgroundColor: "#0a0a0a", justifyContent: "space-around",overflow:"hidden" }}>
+            <View style={{ backgroundColor: "#fff", flexDirection: "row", backgroundColor: "#0a0a0a", justifyContent: "space-around", overflow: "hidden" }}>
                 <RouteMap setActivityScreean={setActivityScreean} />
             </View>
         </View>

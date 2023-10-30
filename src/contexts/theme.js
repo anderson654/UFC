@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
-import darkTheme from "../themes/dark"
+import { styles } from "../themes/dark"
 
 export const ThemeContext = createContext({});
 
@@ -7,11 +7,11 @@ export default function ThemeProvider({ children }) {
     const [theme, setTheme] = useState({});
 
     useState(() => {
-        setTheme(darkTheme);
-    },[])
+        setTheme(styles);
+    }, [])
 
     return (
-        <ThemeContext.Provider value={theme}>
+        <ThemeContext.Provider value={styles}>
             {children}
         </ThemeContext.Provider>
     )
