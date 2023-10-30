@@ -46,7 +46,7 @@ const CustomBottomNavigation = () => {
                 {/* {screen} */}
                 <ComeHere />
             </View>
-            <View style={{ backgroundColor: "#fff", flexDirection: "row", backgroundColor: "#0a0a0a", justifyContent: "space-around" }}>
+            <View style={{ backgroundColor: "#fff", flexDirection: "row", backgroundColor: "#0a0a0a", justifyContent: "space-around",overflow:"hidden" }}>
                 <RouteMap setActivityScreean={setActivityScreean} />
             </View>
         </View>

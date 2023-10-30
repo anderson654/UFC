@@ -64,7 +64,7 @@ export default function App() {
           <NavigationContainer>
             <SafeAreaProvider>
               <DrawerNavigation />
-              <StatusBar style="auto" hidden={false} />
+              <StatusBar style="light" hidden={false}/>
             </SafeAreaProvider>
           </NavigationContainer>
         </AuthProvider>
