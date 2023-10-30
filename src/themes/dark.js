@@ -17,6 +17,9 @@ const tipoGraph = {
 }
 
 export const styles = StyleSheet.create({
+    backGroundDefault: {
+        backgroundColor: darkTheme.primaryColor
+    },
     primaryTextColor: {
         color: darkTheme.principalColorText
     },
@@ -43,7 +46,13 @@ export const styles = StyleSheet.create({
     },
     textCardResults: {
         fontFamily: 'Rubik_600SemiBold',
-        fontSize: tipoGraph.h4,
+        fontSize: tipoGraph.h2,
         color: darkTheme.principalColorText
-    }
+    },
+    subTextCards: {
+        color: "rgba(255,255,255,.7)",
+        fontFamily: 'Rubik_700Bold',
+        textTransform: "uppercase",
+        fontSize: 10
+    },
 });

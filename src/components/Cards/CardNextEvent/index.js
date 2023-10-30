@@ -14,7 +14,7 @@ export default function CardNextEvent() {
 
     return (
         <CardImage>
-            <View style={{ flex: 1, padding: 10, paddingTop: layoutTopSidebar.height }}>
+            <View style={{ flex: 1, padding: 10, paddingTop: layoutTopSidebar.height + 5 }}>
                 <View style={{ marginBottom: 5 }}>
                     <Title>campbell vs west point: cfc match day</Title>
                 </View>

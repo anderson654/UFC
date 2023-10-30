@@ -8,14 +8,17 @@ import { useDefaultConstsContext } from "../../contexts/defaultConsts";
 
 export default function Results() {
     const { layoutTopSidebar } = useDefaultConstsContext();
-    
+    const paddingHeigth = layoutTopSidebar?.height + 5;
+
     return (
         <DefaultContainer defaultPaddingHorizontal={true}>
             <View style={{ flex: 1, position: "relative" }}>
                 <ScrollView style={{ flex: 1 }}>
-                    <View style={{ paddingTop: layoutTopSidebar.height }}>
-                        <CardResults />
-                    </View>
+                    {!!paddingHeigth &&
+                        <View style={{ paddingTop: paddingHeigth }}>
+                            <CardResults />
+                        </View>
+                    }
                 </ScrollView>
                 <TopMenu />
             </View>
