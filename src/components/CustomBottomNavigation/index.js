@@ -3,6 +3,7 @@ import { Text, TouchableRipple } from 'react-native-paper';
 import { Icon } from '@rneui/themed';
 import { View, StyleSheet } from 'react-native';
 import DefaultModal from '../Modals/DefaultModal';
+import IframeVimeo from '../Videos/IframeVimeo';
 
 //screeans
 import ComeHere from '../../screens/ComeHere';
@@ -46,6 +47,7 @@ const CustomBottomNavigation = () => {
             <View style={{ flex: 1 }}>
                 {screen}
                 {/* <ComeHere /> */}
+                {/* <IframeVimeo/> */}
             </View>
             <View style={{ backgroundColor: "#fff", flexDirection: "row", backgroundColor: "#0a0a0a", justifyContent: "space-around", overflow: "hidden" }}>
                 <RouteMap setActivityScreean={setActivityScreean} />
