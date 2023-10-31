@@ -10,6 +10,8 @@ import * as SplashScreen from 'expo-splash-screen';
 import ThemeProvider from './src/contexts/theme';
 import AuthProvider from './src/contexts/auth';
 import DefaultConstsProvider from './src/contexts/defaultConsts';
+import ModalLogin from './src/components/Modals/ModalLogin';
+
 SplashScreen.preventAutoHideAsync();
 
 import {
@@ -97,6 +99,7 @@ export default function App() {
             <NavigationContainer>
               <SafeAreaProvider>
                 <DrawerNavigation />
+                <ModalLogin />
                 <StatusBar style="light" hidden={false} />
               </SafeAreaProvider>
             </NavigationContainer>

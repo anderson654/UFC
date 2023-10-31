@@ -5,7 +5,7 @@ import { ScrollView } from "react-native-gesture-handler";
 import DefaultContainer from "../../components/Containers/DefaultContainer";
 import CardResults from "../../components/Cards/CardResults";
 import { useDefaultConstsContext } from "../../contexts/defaultConsts";
-
+import CardNews from "../../components/Cards/CardNews";
 export default function Results() {
     const { layoutTopSidebar } = useDefaultConstsContext();
     const paddingHeigth = layoutTopSidebar?.height + 5;
