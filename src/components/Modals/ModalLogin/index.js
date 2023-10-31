@@ -4,9 +4,10 @@ import { ImageBackground, Text } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { TabView } from "@rneui/base";
 import { useDefaultConstsContext } from "../../../contexts/defaultConsts";
-import StepOne from "./Screens/StepOne";
-import StepTwo from "./Screens/StepTwo";
+import StepSelectTypeLogin from "./Screens/StepSelectTypeLogin";
+import StepRegister from "./Screens/StepRegister";
 import StepLogin from "./Screens/StepLogin";
+import StepResetPassword from "./Screens/StepResetPassword";
 
 
 export default function ModalLogin() {
@@ -24,13 +25,16 @@ export default function ModalLogin() {
                     {/* //colocar aqui */}
                     <TabView value={stepModalLogin} animationType="spring">
                         <TabView.Item style={{ flex: 1 }}>
-                            <StepOne />
-                        </TabView.Item>
-                        <TabView.Item style={{ flex: 1 }}>
-                            <StepTwo />
+                            <StepSelectTypeLogin />
                         </TabView.Item>
                         <TabView.Item style={{ flex: 1 }}>
                             <StepLogin />
+                        </TabView.Item>
+                        <TabView.Item style={{ flex: 1 }}>
+                            <StepRegister />
+                        </TabView.Item>
+                        <TabView.Item style={{ flex: 1 }}>
+                            <StepResetPassword />
                         </TabView.Item>
                     </TabView>
                 </LinearGradient>

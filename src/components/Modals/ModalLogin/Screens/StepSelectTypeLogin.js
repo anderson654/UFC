@@ -3,6 +3,7 @@ import { View, Text, TouchableOpacity } from "react-native";
 import { useThemeContext } from "../../../../contexts/theme";
 import DefaultBtn from "../../../Buttons/DefaultBtn";
 import { useDefaultConstsContext } from "../../../../contexts/defaultConsts";
+import CancelModalLogin from "../../../Buttons/CancelModalLogin";
 
 
 const TitleNewAccount = () => {
@@ -16,24 +17,22 @@ const TitleNewAccount = () => {
     )
 }
 
-export default function StepOne() {
+export default function StepSelectTypeLogin() {
     const { textCardResults, subTextCards } = useThemeContext();
-    const { setModalLogin, setStepModalLogin } = useDefaultConstsContext();
+    const { setStepModalLogin } = useDefaultConstsContext();
 
     return (
         <View style={{ flex: 1, alignItems: "center", marginTop: 40, padding: 20 }}>
             <Text style={[textCardResults, { fontSize: 20 }]}>Bem-vindo{'\n\n'}</Text>
             <Text style={[subTextCards, { fontSize: 12, color: 'rgba(255,255,255,.8)', marginBottom: 40 }]}>Escolha como fazer login</Text>
             <View style={{ width: '100%' }}>
-                <DefaultBtn text="continue com login" onPress={() => setStepModalLogin(2)} />
-                <DefaultBtn text="login sky" />
-                <DefaultBtn text="login HBO" style={{ marginBottom: 0 }} />
+                <DefaultBtn text="Continue com E-mail" onPress={() => setStepModalLogin(1)} textTransform="none" />
+                <DefaultBtn text="Login sky" textTransform="none" />
+                <DefaultBtn text="Login HBO" style={{ marginBottom: 0 }} textTransform="none" />
                 <TitleNewAccount />
-                <DefaultBtn backgroundColor="red" color={"#fff"} text="assine" onPress={() => setStepModalLogin(1)} />
+                <DefaultBtn backgroundColor="red" color={"#fff"} text="assine" onPress={() => setStepModalLogin(2)} />
                 <View style={{ alignItems: "center" }}>
-                    <TouchableOpacity onPress={() => setModalLogin(false)} style={{ padding: 20 }}>
-                        <Text style={[textCardResults, { fontSize: 14 }]}>Cancelar</Text>
-                    </TouchableOpacity>
+                    <CancelModalLogin />
                 </View>
             </View>
         </View>

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BottomNavigation, Text, TouchableRipple } from 'react-native-paper';
+import { Text, TouchableRipple } from 'react-native-paper';
 import { Icon } from '@rneui/themed';
 import { View, StyleSheet } from 'react-native';
 import DefaultModal from '../Modals/DefaultModal';
@@ -44,8 +44,8 @@ const CustomBottomNavigation = () => {
     return (
         <View style={{ flex: 1, flexDirection: "column", backgroundColor: 'black' }}>
             <View style={{ flex: 1 }}>
-                {/* {screen} */}
-                <ComeHere />
+                {screen}
+                {/* <ComeHere /> */}
             </View>
             <View style={{ backgroundColor: "#fff", flexDirection: "row", backgroundColor: "#0a0a0a", justifyContent: "space-around", overflow: "hidden" }}>
                 <RouteMap setActivityScreean={setActivityScreean} />
