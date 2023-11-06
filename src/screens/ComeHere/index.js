@@ -15,7 +15,7 @@ export default function ComeHere() {
                 <ScrollView style={{ flex: 1 }}>
                     <CardNextEvent />
                     <CardDescribeVideosOne />
-                    <CardDescribeVideosOne />
+                    {/* <CardDescribeVideosOne /> */}
                 </ScrollView>
                 <TopMenu />
             </View>

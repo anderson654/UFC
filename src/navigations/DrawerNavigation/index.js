@@ -27,7 +27,7 @@ const MenuItems = (props) => {
                 <View style={{flex:1}}></View>
             </View>
             <View>
-                <Text>Hello</Text>
+                {/* <Text>Hello</Text> */}
             </View>
         </View>
     )

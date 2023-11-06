@@ -3,6 +3,6 @@ import { View } from "react-native";
 
 export default function FightPass() {
     return (
-        <View style={{ flex: 1, backgroundColor: "red" }}></View>
+        <View style={{ flex: 1, backgroundColor: "#111111" }}></View>
     )
 }
